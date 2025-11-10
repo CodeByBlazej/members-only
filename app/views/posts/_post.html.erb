@@ -1,0 +1,17 @@
+<div id="<%= dom_id post %>">
+
+  <% if user_signed_in? %>
+    <h3>This post belongs to user: <%= current_user.name %></h3>
+  <% end %>
+
+  <p>
+    <strong>Title:</strong>
+    <%= post.title %>
+  </p>
+
+  <p>
+    <strong>Body:</strong>
+    <%= post.body %>
+  </p>
+
+</div>
