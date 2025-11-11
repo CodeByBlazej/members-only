@@ -1,7 +1,7 @@
 <div id="<%= dom_id post %>">
 
-  <% if user_signed_in? %>
-    <h3>This post belongs to user: <%= current_user.name %></h3>
+  <% if user_signed_in? && post.user.present? %>
+    <h3>This post belongs to user: <%= post.user.name %></h3>
   <% end %>
 
   <p>
